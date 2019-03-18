@@ -12,6 +12,8 @@ import {
   Upload,
   Icon, 
   Radio } from 'antd';
+import locale from 'antd/lib/date-picker/locale/zh_CN';
+
 const FormItem = Form.Item;
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -41,7 +43,7 @@ class RegisterForm extends React.Component {
   }
   submit = () => {
     const data = this.props.form.getFieldsValue()
-    console.log(data)
+    message.success(JSON.stringify(data))
   }
   render() {
     const { getFieldDecorator } = this.props.form
@@ -143,14 +145,14 @@ class RegisterForm extends React.Component {
             <FormItem label="出生日期" { ...formItemLayout }>
               {
                 getFieldDecorator('birthday')(
-                  <DatePicker mode="date" showTime format="YYYY-MM-DD" />
+                  <DatePicker locale={locale} mode="date" showTime format="YYYY-MM-DD" />
                 )
               }
             </FormItem>
             <FormItem label="起床时间" { ...formItemLayout }>
               {
                 getFieldDecorator('leaveBed')(
-                  <DatePicker mode="time" showTime format="hh:mm:ss" />
+                  <DatePicker locale={locale} mode="time" showTime format="hh:mm:ss" />
                 )
               }
             </FormItem>

@@ -13,6 +13,8 @@ import Gallery from './page/ui/gallery';
 import Carousel from './page/ui/carousel';
 import FormLogin from './page/Form/login';
 import RegisterForm from './page/Form/register';
+import BasicTable from './page/table/basic';
+import HighTable from './page/table/high';
 import NoMatch from './page/nomatch';
 
 export default class IRouter extends React.Component {
@@ -34,6 +36,8 @@ export default class IRouter extends React.Component {
                 <Route path="/admin/ui/carousel" component={Carousel} />
                 <Route path="/admin/form/login" component={FormLogin} />
                 <Route path="/admin/form/reg" component={RegisterForm} />
+                <Route path="/admin/table/basic" component={BasicTable} />
+                <Route path="/admin/table/high" component={HighTable} />
                 <Route component={NoMatch} />
               </Switch>
             </Admin>
