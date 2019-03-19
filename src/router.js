@@ -3,6 +3,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 import Admin from './admin';
 import Login from './page/login';
+import Home from './page/home';
 import Buttons from './page/ui/buttons';
 import Modals from './page/ui/modals';
 import Loadings from './page/ui/loadings';
@@ -26,6 +27,7 @@ export default class IRouter extends React.Component {
           <Route path="/admin" render={() => 
             <Admin>
               <Switch>
+                <Route path="/admin/home" component={Home} />
                 <Route path="/admin/ui/buttons" component={Buttons} />
                 <Route path="/admin/ui/modals" component={Modals} />
                 <Route path="/admin/ui/loadings" component={Loadings} />
