@@ -31,7 +31,7 @@ export default class NavList extends React.Component {
       <div>
         <div className="logo">
           <img src="/assets/logo-ant.svg" alt="logo"/>
-          <span className="title">Manegaer</span>
+          <span className="title">Manager</span>
         </div>
         <Menu theme="dark">
           { this.state.menuTreeNodes }

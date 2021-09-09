@@ -1,8 +1,10 @@
-import React from 'react';
-export default class Buttons extends React.Component {
-  render() {
-    return (
-      <div>404 not found page</div>
-    )
-  }
+import { useEffect } from 'react';
+
+const NotFound = function(props) {
+  useEffect(() => {
+    console.log(props.location)
+  }, [props.location])
+  return null
 }
+
+export default NotFound
